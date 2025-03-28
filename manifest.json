@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Dark Mode for Edge (Dark Reader)",
+    "version": "1.0",
+    "description": "Apply high-quality dark mode using Dark Reader's engine",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+      "default_icon": "icon.png",
+      "default_title": "Toggle Dark Mode"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "web_accessible_resources": [{
+      "resources": ["darkreader.js"],
+      "matches": ["<all_urls>"]
+    }],
+    "icons": {
+      "48": "icon.png"
+    }
+  }
